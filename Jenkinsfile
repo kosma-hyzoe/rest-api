@@ -1,13 +1,13 @@
 pipeline {
-  
+
     agent any
 
     stages {
-      
+
         stage("build"){
-          
+
             steps {
-              // build the maven project  
+              // build the maven project
               sh "mvn -Dmaven.test.failure.ignore=true clean package"
                 // setting up limits to the number of stored results
                 // setting up git integration
@@ -17,7 +17,7 @@ pipeline {
                 // Configuring parametrization (browser, credentials etc.)
                 // "Saving and publishing build artifacts (logs\screenshots)"
             }
-    
+
         }
         stage("test"){
 
@@ -31,4 +31,3 @@ pipeline {
         }
     }
 }
-
