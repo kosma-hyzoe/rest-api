@@ -22,6 +22,7 @@ pipeline {
         stage("test"){
 
             steps {
+              echo "running the tests"
                  // Manual build start
                  // Scheduled build (knowledge of cron expressions)
                  // Starting a build from another build (2nd build starts after the (un)successful build of the 1st, etc.)
